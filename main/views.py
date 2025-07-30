@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import Message
 
 
 def home(request):
@@ -13,9 +14,6 @@ def blog(request):
 def contact(request):
     return render(request, "main/contact.html")
 
-def project(request):
-    return render(request, "main/project.html")
-
 def service(request):
     return render(request, "main/service.html")
 
@@ -24,3 +22,20 @@ def team(request):
 
 def testimonial(request):
     return render(request, "main/testimonial.html")
+
+def send_message(request):
+    if request.method == "POST":
+        email = request.POST["email"]
+        name = request.POST["name"]
+        subject = request.POST["subject"]
+        phone = request.POST["phone"]
+        message = request.POST["message"]
+        message = Message(
+            email=email,
+            message=message,
+            subject=subject,
+            phone=phone,
+            name=name
+        )
+        message.save()
+    return redirect("contact")

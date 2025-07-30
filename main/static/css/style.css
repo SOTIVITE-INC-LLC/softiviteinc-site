@@ -156,6 +156,12 @@
     position: relative;
 }
 
+.carousel-item img{
+    height: 1000px !important;
+    width: 100vw !important;
+
+}
+
 .carousel-item::after {
     content: "";
     width: 100%;
@@ -265,7 +271,7 @@
     }
     
     .carousel-item img {
-        min-height: 500px;
+        height: 500px !important;
         object-fit: cover;
     }
 
@@ -362,6 +368,9 @@
 }
 
 .services-item:hover .services-content-icon i {
+    color: var(--bs-secondary) !important;
+}
+.services-item:hover .services-content-icon h4 {
     color: var(--bs-secondary) !important;
 }
 

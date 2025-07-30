@@ -26,6 +26,7 @@
     rel="stylesheet" /> 
     <link href="{% static "css/bootstrap.min.css" %}"
     rel="stylesheet" />
+    <link rel="shortcut icon" href="{% static "img/logo.png" %}" type="image/x-icon">
 
 
     <link href="{% static "css/style.css" %}" rel="stylesheet" />
@@ -34,12 +35,12 @@
   </head>
   <body>
       <!-- Spinner Start -->
-    {% comment %} <div
+     <div
       id="spinner"
       class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
     >
-      <div class="spinner-grow text-primary" role="status"></div>
-    </div> {% endcomment %}
+      <img class="spinner-grow" src="{% static "img/logo.png" %}" alt="" width="100px">
+    </div> 
     <!-- Spinner End -->
 
      <!-- Topbar Start -->
@@ -50,16 +51,16 @@
             <small class="me-3 text-white-50"
               ><a href="#"
                 ><i class="fas fa-map-marker-alt me-2 text-secondary"></i></a
-              >23 Ranking Street, New York</small
+              >Accra Ghana</small
             >
             <small class="me-3 text-white-50"
               ><a href="#"
                 ><i class="fas fa-envelope me-2 text-secondary"></i></a
-              >Email@Example.com</small
+              >softiviteinc@gmail.com</small
             >
           </div>
           <div id="note" class="text-secondary d-none d-xl-flex">
-            <small>Note : We help you to Grow your Business</small>
+            <small>Note : We help you to Grow your Business Digitally</small>
           </div>
           <div class="top-link">
             <a
@@ -93,8 +94,9 @@
       <div class="container">
         <nav class="navbar navbar-dark navbar-expand-lg py-0">
           <a href="{% url "home" %}" class="navbar-brand">
+            
             <h1 class="text-white fw-bold d-block">
-              High<span class="text-secondary">Tech</span>
+              <span><img src="{% static "img/logo.png" %}" alt="" width="40px" height="40px" style="background-color: white; border-radius: 100%;"></span> Softi<span class="text-secondary">vite</span>
             </h1>
           </a>
           <button
@@ -112,12 +114,11 @@
             <div class="navbar-nav ms-auto mx-xl-auto p-0">
               <a
                 href="{% url "home" %}"
-                class="nav-item nav-link active text-secondary"
+                class="nav-item nav-link active"
                 >Home</a
               >
               <a href="{% url "about" %}" class="nav-item nav-link">About</a>
               <a href="{% url "service" %}" class="nav-item nav-link">Services</a>
-              <a href="{% url "project" %}" class="nav-item nav-link">Projects</a>
               <a href="{% url "contact" %}" class="nav-item nav-link">Contact</a>
               </div>
               <div class="d-none d-xl-flex flex-shirink-0">
@@ -134,7 +135,7 @@
             </div>
             <div class="d-flex flex-column pe-4 border-end">
               <span class="text-white-50">Have any questions?</span>
-              <span class="text-secondary">Call: + 0123 456 7890</span>
+              <span class="text-secondary">Call: +233 (0) 246136978</span>
             </div>
           </div>
               
@@ -152,10 +153,16 @@
             <div class="container pt-5 pb-4">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
-                        <a href="index.html">
-                            <h1 class="text-white fw-bold d-block">High<span class="text-secondary">Tech</span> </h1>
+                        <a href="{% url "home" %}">
+                            <h1 class="text-white fw-bold d-block">
+              <span><img src="{% static "img/logo.png" %}" alt="" width="40px" height="40px" style="background-color: white; border-radius: 100%;"></span> Softi<span class="text-secondary">vite</span>
+            </h1>
                         </a>
-                        <p class="mt-4 text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta facere delectus qui placeat inventore consectetur repellendus optio debitis.</p>
+                        <p class="mt-4 text-light">We believe that
+          technology should empower, not complicate. Founded in Accra with a
+          passion for innovation, we set out to bridge the gap between complex
+          IT challenges and straightforward, effective solutions for businesses
+          of all sizes.</p>
                         <div class="d-flex hightech-link">
                             <a href="" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-facebook-f text-primary"></i></a>
                             <a href="" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-twitter text-primary"></i></a>
@@ -166,11 +173,11 @@
                     <div class="col-lg-3 col-md-6">
                         <a href="#" class="h3 text-secondary">Short Link</a>
                         <div class="mt-4 d-flex flex-column short-link">
-                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>About us</a>
-                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact us</a>
-                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a>
-                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Projects</a>
-                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Latest Blog</a>
+                            <a href="{% url "about" %}" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>About us</a>
+                            <a href="{% url "contact" %}" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact us</a>
+                            <a href="{% url "service" %}" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a>
+                            {% comment %} <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Projects</a> {% endcomment %}
+                            {% comment %} <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Latest Blog</a> {% endcomment %}
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -179,23 +186,22 @@
                             <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Terms Of use</a>
                             <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Privacy Policy</a>
                             <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Helps</a>
-                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>FQAs</a>
                             <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <a href="#" class="h3 text-secondary">Contact Us</a>
                         <div class="text-white mt-4 d-flex flex-column contact-link">
-                            <a href="#" class="pb-3 text-light border-bottom border-secondary"><i class="fas fa-map-marker-alt text-secondary me-2"></i> 123 Street, New York, USA</a>
-                            <a href="#" class="py-3 text-light border-bottom border-secondary"><i class="fas fa-phone-alt text-secondary me-2"></i> +123 456 7890</a>
-                            <a href="#" class="py-3 text-light border-bottom border-secondary"><i class="fas fa-envelope text-secondary me-2"></i> info@exmple.con</a>
+                            <a href="#" class="pb-3 text-light border-bottom border-secondary"><i class="fas fa-map-marker-alt text-secondary me-2"></i> Accra-Ghana</a>
+                            <a href="#" class="py-3 text-light border-bottom border-secondary"><i class="fas fa-phone-alt text-secondary me-2"></i> +233 (0) 246136978</a>
+                            <a href="#" class="py-3 text-light border-bottom border-secondary"><i class="fas fa-envelope text-secondary me-2"></i> softiviteinc@gmail.con</a>
                         </div>
                     </div>
                 </div>
                 <hr class="text-light mt-5 mb-4">
                 <div class="row">
                     <div class="col-md-12 text-center text-md-start">
-                        <span class="text-light"><a href="#" class="text-secondary"><i class="fas fa-copyright text-secondary me-2"></i>Your Site Name</a>, All right reserved.</span>
+                        <span class="text-light"><a href="#" class="text-secondary"><i class="fas fa-copyright text-secondary me-2"></i>Softivite LLC</a>, All right reserved.</span>
                     </div>
                 </div>
             </div>

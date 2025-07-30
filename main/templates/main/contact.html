@@ -58,13 +58,8 @@
       data-wow-delay=".3s"
       style="max-width: 600px"
     >
-      <h5 class="text-primary">Get In Touch</h5>
+      <h5 class="text-secondary">Get In Touch</h5>
       <h1 class="mb-3">Contact for any query</h1>
-      <p class="mb-2">
-        The contact form is currently inactive. Get a functional and working
-        contact form with Ajax & PHP in a few minutes. Just copy and paste the
-        files, add a little code and you're done.
-      </p>
     </div>
     <div class="contact-detail position-relative p-5">
       <div class="row g-5 mb-5 justify-content-center">
@@ -82,7 +77,7 @@
                 href="https://goo.gl/maps/Zd4BCynmTb98ivUJ6"
                 target="_blank"
                 class="h5"
-                >23 rank Str, NY</a
+                >Accra-Ghana</a
               >
             </div>
           </div>
@@ -98,7 +93,7 @@
             <div class="ms-3">
               <h4 class="text-primary">Call Us</h4>
               <a class="h5" href="tel:+0123456789" target="_blank"
-                >+012 3456 7890</a
+                >+233 (0) 246136978</a
               >
             </div>
           </div>
@@ -113,8 +108,8 @@
             </div>
             <div class="ms-3">
               <h4 class="text-primary">Email Us</h4>
-              <a class="h5" href="mailto:info@example.com" target="_blank"
-                >info@example.com</a
+              <a class="h5" href="mailto:softiviteinc@gmail.com" target="_blank"
+                >softiviteinc@gmail.com</a
               >
             </div>
           </div>
@@ -134,11 +129,15 @@
           </div>
         </div>
         <div class="col-lg-6 wow fadeIn" data-wow-delay=".5s">
-          <div class="p-5 rounded contact-form">
+          <form action="send" method="post">
+          <div class="p-1 rounded contact-form">
+            {% csrf_token %} 
             <div class="mb-4">
               <input
                 type="text"
+                required
                 class="form-control border-0 py-3"
+                name="name"
                 placeholder="Your Name"
               />
             </div>
@@ -146,29 +145,46 @@
               <input
                 type="email"
                 class="form-control border-0 py-3"
+                required
+                name="email"
                 placeholder="Your Email"
               />
             </div>
             <div class="mb-4">
               <input
                 type="text"
+                required
                 class="form-control border-0 py-3"
-                placeholder="Project"
+                name="subject"
+                placeholder="Subject"
+              />
+            </div>
+            
+            <div class="mb-4">
+              <input
+                type="tel"
+                required
+                class="form-control border-0 py-3"
+                name="phone"
+                placeholder="Phone"
               />
             </div>
             <div class="mb-4">
               <textarea
                 class="w-100 form-control border-0 py-3"
                 rows="6"
+                required
                 cols="10"
+                name="message"
                 placeholder="Message"
               ></textarea>
             </div>
             <div class="text-start">
-              <button class="btn bg-primary text-white py-3 px-5" type="button">
+              <button class="btn bg-primary text-white py-3 px-5" type="submit">
                 Send Message
               </button>
             </div>
+            </form>
           </div>
         </div>
       </div>
