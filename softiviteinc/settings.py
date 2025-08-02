@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-#luhnl(n&_v=bs@)%x@g$j*rppw1yzgg)xpjt(5*8%n0@fa^x1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['softiviteinc.org', 'www.softiviteinc.org']
+ALLOWED_HOSTS = ['softiviteinc.org', 'www.softiviteinc.org', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -97,6 +97,12 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://www.softiviteinc.org',
+    'https://softiviteinc.org',
+    'http://localhost:8000',  # For local development
 ]
 
 

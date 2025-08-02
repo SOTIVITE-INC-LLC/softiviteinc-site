@@ -1,4 +1,8 @@
-{% extends "main/base.html" %} {% load static %} {% block content %}
+{% extends "main/base.html" %} {% load static %} 
+{% block title %}
+SOFTIVITE LLC, Your Digital Solution
+{% endblock title %}
+{% block content %}
 <!-- Carousel Start -->
 <div class="container-fluid px-0">
   <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
@@ -33,22 +37,6 @@
               IT infrastructure to drive efficiency, innovation, and sustainable
               growth. Let technology work for you
             </p>
-            <a href="" class="me-2"
-              ><button
-                type="button"
-                class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn1 animated fadeInLeft"
-              >
-                Read More
-              </button></a
-            >
-            <a href="" class="ms-2"
-              ><button
-                type="button"
-                class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn2 animated fadeInRight"
-              >
-                Contact Us
-              </button></a
-            >
           </div>
         </div>
       </div>
@@ -68,22 +56,6 @@
               network solutions, we engineer reliable and scalable platforms
               that protect your data and power your operations.
             </p>
-            <a href="" class="me-2"
-              ><button
-                type="button"
-                class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn1 animated fadeInLeft"
-              >
-                Read More
-              </button></a
-            >
-            <a href="" class="ms-2"
-              ><button
-                type="button"
-                class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn2 animated fadeInRight"
-              >
-                Contact Us
-              </button></a
-            >
           </div>
         </div>
       </div>
@@ -103,22 +75,6 @@
               operations? Discover how our comprehensive IT services can empower
               your business. Contact us for a free consultation.
             </p>
-            <a href="" class="me-2"
-              ><button
-                type="button"
-                class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn1 animated fadeInLeft"
-              >
-                Read More
-              </button></a
-            >
-            <a href="" class="ms-2"
-              ><button
-                type="button"
-                class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn2 animated fadeInRight"
-              >
-                Contact Us
-              </button></a
-            >
           </div>
         </div>
       </div>
@@ -144,41 +100,6 @@
   </div>
 </div>
 <!-- Carousel End -->
-
-<!-- Fact Start -->
-<div class="container-fluid bg-secondary py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3 wow fadeIn" data-wow-delay=".1s">
-        <div class="d-flex counter">
-          <h1 class="me-3 text-primary counter-value">99</h1>
-          <h5 class="text-white mt-1">Success in getting happy customer</h5>
-        </div>
-      </div>
-      <div class="col-lg-3 wow fadeIn" data-wow-delay=".3s">
-        <div class="d-flex counter">
-          <h1 class="me-3 text-primary counter-value">25</h1>
-          <h5 class="text-white mt-1">Thousands of successful business</h5>
-        </div>
-      </div>
-      <div class="col-lg-3 wow fadeIn" data-wow-delay=".5s">
-        <div class="d-flex counter">
-          <h1 class="me-3 text-primary counter-value">120</h1>
-          <h5 class="text-white mt-1">Total clients who love HighTech</h5>
-        </div>
-      </div>
-      <div class="col-lg-3 wow fadeIn" data-wow-delay=".7s">
-        <div class="d-flex counter">
-          <h1 class="me-3 text-primary counter-value">5</h1>
-          <h5 class="text-white mt-1">
-            Stars reviews given by satisfied clients
-          </h5>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Fact End -->
 
 <!-- About Start -->
 <div class="container-fluid py-5 my-5">
@@ -681,7 +602,7 @@
         <div class="team-content">
           <div class="team-img-icon">
             <div class="team-img rounded-circle">
-              <img src="{% static "img/afari.jpg" %}" class="img-fluid
+              <img src="{% static "img/sam.jpg" %}" class="img-fluid
               rounded-circle" alt="" width="100px" height="100px"/>
             </div>
             <div class="team-name text-center py-3">
@@ -821,6 +742,43 @@
           </div>
         </div>
       </div>
+
+      <div class="rounded team-item">
+        <div class="team-content">
+          <div class="team-img-icon">
+            <div class="team-img rounded-circle">
+              <img src="{% static "img/opoku.jpg" %}" class="img-fluid w-100
+              rounded-circle" alt="" width="100px" height="100px"/>
+            </div>
+            <div class="team-name text-center py-3">
+              <h4 class="">Nana Chris Opoku</h4>
+              <p class="m-0">Software Engineer</p>
+            </div>
+            <div class="team-icon d-flex justify-content-center pb-4">
+              <a
+                class="btn btn-square btn-secondary text-white rounded-circle m-1"
+                href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                class="btn btn-square btn-secondary text-white rounded-circle m-1"
+                href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                class="btn btn-square btn-secondary text-white rounded-circle m-1"
+                href=""
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                class="btn btn-square btn-secondary text-white rounded-circle m-1"
+                href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -848,7 +806,7 @@
           </div>
           <div class="ms-4">
             <h4 class="text-secondary">Ama Serwaa</h4>
-            <p class="m-0 pb-3">Fashing Designer</p>
+            <p class="m-0 pb-3">Fashion Designer</p>
             <div class="d-flex pe-5">
               <i class="fas fa-star me-1 text-primary"></i>
               <i class="fas fa-star me-1 text-primary"></i>
